@@ -40,7 +40,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: dist/
+          local-dir: dist/sm-health/browser/
           server-dir: //httpdocs/health/
           exclude: |
             **/assets/**
