@@ -1,5 +1,4 @@
-name: Build & Deploy Angular Multi-Client
-
+name: Build & Deploy Angular 
 on:
   workflow_dispatch:
   push:
@@ -24,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build Angular
-        run: npm run build:production
+        run: npm run build:prod
 
       - name: Check FTP secrets
         run: |
