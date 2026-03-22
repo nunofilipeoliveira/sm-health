@@ -1,0 +1,54 @@
+[2026-03-04T23:41:51.324Z] Servidor a iniciar na porta 3001
+[2026-03-04T23:41:51.335Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\
+[2026-03-04T23:41:51.338Z] ERRO: Pasta não encontrada: C:\Users\nuno8\git\repository\sm-health\health\
+[2026-03-04T23:46:42.937Z] Servidor a iniciar na porta 3001
+[2026-03-04T23:46:42.944Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\
+[2026-03-04T23:46:42.946Z] ERRO: Pasta não encontrada: C:\Users\nuno8\git\repository\sm-health\health\
+[2026-03-04T23:47:02.650Z] Servidor a iniciar na porta 3001
+[2026-03-04T23:47:02.657Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\dist
+[2026-03-04T23:47:02.660Z] ERRO: Pasta não encontrada: C:\Users\nuno8\git\repository\sm-health\health\dist
+[2026-03-04T23:47:52.780Z] Servidor a iniciar na porta 3001
+[2026-03-04T23:47:52.788Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\dist
+[2026-03-04T23:47:52.803Z] Servidor a correr em http://localhost:3001/
+[2026-03-04T23:48:13.858Z] Requisição recebida em /api/hello
+[2026-03-04T23:52:57.420Z] Servidor a iniciar na porta 3000
+[2026-03-04T23:52:57.428Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\dist
+[2026-03-04T23:52:57.437Z] Servidor a correr em http://localhost:3000/
+[2026-03-04T23:53:05.110Z] Requisição GET /api/runs
+[2026-03-04T23:54:40.915Z] Servidor a iniciar na porta 3030
+[2026-03-04T23:54:40.923Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\dist
+[2026-03-04T23:54:40.931Z] Servidor a correr em http://localhost:3030/
+[2026-03-04T23:58:07.786Z] Requisição GET /api/runs
+[2026-03-04T23:58:09.848Z] Requisição GET /api/runs
+[2026-03-05T22:12:23.854Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:12:23.862Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health
+[2026-03-05T22:12:23.877Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:15:24.284Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:15:24.292Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser
+[2026-03-05T22:15:24.299Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:16:11.100Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:16:11.108Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser
+[2026-03-05T22:16:11.115Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:18:07.266Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:18:07.274Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser no caminho /health/
+[2026-03-05T22:18:07.284Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:18:10.994Z] Requisição GET /api/runs
+[2026-03-05T22:34:25.311Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:34:25.319Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser no caminho /health/
+[2026-03-05T22:34:25.333Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:34:31.877Z] Requisição GET /api/runs
+[2026-03-05T22:34:32.475Z] Requisição GET /api/runs
+[2026-03-05T22:41:42.519Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:41:42.528Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser no caminho /health/
+[2026-03-05T22:41:42.536Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:41:46.743Z] Requisição GET /api/runs
+[2026-03-05T22:47:18.527Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:47:18.534Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:47:18.539Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser no caminho /health/
+[2026-03-05T22:47:18.613Z] Servidor a correr em http://0.0.0.0:3031/health/
+[2026-03-05T22:47:23.016Z] Requisição GET /api/runs
+[2026-03-05T22:51:07.801Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:51:07.807Z] Servidor a iniciar na porta 5000
+[2026-03-05T22:51:07.812Z] A servir ficheiros estáticos de: C:\Users\nuno8\git\repository\sm-health\health\browser no caminho /health/
+[2026-03-05T22:51:07.867Z] Servidor a correr em http://0.0.0.0:5000/health/
+[2026-03-05T22:51:19.937Z] Requisição GET /api/runs

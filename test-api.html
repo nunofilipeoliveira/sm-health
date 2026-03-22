@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .response {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SM Health API Test</h1>
+
+        <button class="button" onclick="testGetRuns()">Test GET /api/runs</button>
+        <button class="button" onclick="testAddRun()">Test POST /api/runs</button>
+        <button class="button" onclick="testDeleteRun()">Test DELETE /api/runs/:id</button>
+
+        <div id="response" class="response"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:4200/health/api';
+
+        async function testGetRuns() {
+            try {
+                const response = await fetch(`${API_BASE}/runs`);
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error}`;
+            }
+        }
+
+        async function testAddRun() {
+            try {
+                const newRun = {
+                    date: new Date().toISOString().split('T')[0],
+                    time: 3600,
+                    distance: 10,
+                    notes: "Test run from API"
+                };
+                const response = await fetch(`${API_BASE}/runs`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newRun)
+                });
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error}`;
+            }
+        }
+
+        async function testDeleteRun() {
+            try {
+                const response = await fetch(`${API_BASE}/runs`);
+                const data = await response.json();
+                if (data.length === 0) {
+                    document.getElementById('response').textContent = "No runs to delete";
+                    return;
+                }
+                const lastRun = data[data.length - 1];
+                const deleteResponse = await fetch(`${API_BASE}/runs/${lastRun.id}`, {
+                    method: 'DELETE'
+                });
+                document.getElementById('response').textContent = `Deleted run with id: ${lastRun.id}`;
+            } catch (error) {
+                document.getElementById('response').textContent = `Error: ${error}`;
+            }
+        }
+    </script>
+</body>
+</html>

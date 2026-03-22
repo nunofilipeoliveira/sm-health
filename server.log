@@ -1,0 +1,36 @@
+[2026-03-05T22:22:38.369Z] Servidor a iniciar na porta \\.\pipe\5007782a-58f8-4693-940f-ac071a2d1705
+[2026-03-05T22:22:38.377Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:22:39.172Z] Servidor a correr em http://localhost:\\.\pipe\5007782a-58f8-4693-940f-ac071a2d1705/health/
+[2026-03-05T22:28:12.864Z] Servidor a iniciar na porta \\.\pipe\a894475f-1d67-4f29-91bd-b458adae45b4
+[2026-03-05T22:28:12.871Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:28:13.640Z] Servidor a correr em http://localhost:\\.\pipe\a894475f-1d67-4f29-91bd-b458adae45b4/health/
+[2026-03-05T22:32:46.423Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:32:46.428Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:32:46.435Z] Servidor a correr em http://localhost:3031/health/
+[2026-03-05T22:42:19.417Z] Servidor a iniciar na porta \\.\pipe\f55302a4-6750-41cb-8bb3-91c756918d68
+[2026-03-05T22:42:19.422Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:42:19.969Z] Servidor a correr em http://localhost:\\.\pipe\f55302a4-6750-41cb-8bb3-91c756918d68/health/
+[2026-03-05T22:42:53.308Z] Servidor a iniciar na porta \\.\pipe\5618778f-8b62-4100-821c-df77dc6731e0
+[2026-03-05T22:42:53.313Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:42:53.944Z] Servidor a correr em http://localhost:\\.\pipe\5618778f-8b62-4100-821c-df77dc6731e0/health/
+[2026-03-05T22:49:16.075Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:49:16.080Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:49:16.082Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:49:16.104Z] Servidor a correr em http://0.0.0.0:3031/health/
+[2026-03-05T22:49:16.105Z] ERRO ao iniciar servidor: listen EACCES: permission denied 0.0.0.0:3031
+[2026-03-05T22:49:37.010Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:49:37.014Z] Servidor a iniciar na porta 3031
+[2026-03-05T22:49:37.016Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:49:37.039Z] Servidor a correr em http://0.0.0.0:3031/health/
+[2026-03-05T22:49:37.040Z] ERRO ao iniciar servidor: listen EACCES: permission denied 0.0.0.0:3031
+[2026-03-05T22:52:27.460Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:52:27.464Z] Servidor a iniciar na porta 5000
+[2026-03-05T22:52:27.466Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:52:27.490Z] Servidor a correr em http://0.0.0.0:5000/health/
+[2026-03-05T22:52:27.491Z] ERRO ao iniciar servidor: listen EADDRINUSE: address already in use 0.0.0.0:5000
+[2026-03-05T22:52:27.492Z] Porta 5000 já está em uso!
+[2026-03-05T22:57:31.829Z] A usar porta predefinida 3031 (named pipe detectado ou porta inválida)
+[2026-03-05T22:57:31.833Z] Servidor a iniciar na porta 3001
+[2026-03-05T22:57:31.835Z] A servir ficheiros estáticos de: C:\Inetpub\vhosts\sm.com.pt\httpdocs\health\browser no caminho /health/
+[2026-03-05T22:57:31.856Z] Servidor a correr em http://0.0.0.0:3001/health/
+[2026-03-05T22:57:31.856Z] ERRO ao iniciar servidor: listen EACCES: permission denied 0.0.0.0:3001

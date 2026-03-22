@@ -1,0 +1,119 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <button class="btn-back" (click)="goBack()">
+      ← Voltar
+    </button>
+    <h1>Nova Corrida</h1>
+    <p class="subtitle">Regista os detalhes da tua corrida</p>
+  </header>
+
+  <!-- Form -->
+  <form class="run-form" (ngSubmit)="onSubmit()">
+
+    <!-- Date Input -->
+    <div class="form-group">
+      <label for="date">
+        <span class="label-icon">📅</span> Data
+      </label>
+      <input
+        type="date"
+        id="date"
+        [(ngModel)]="date"
+        name="date"
+        required
+      />
+    </div>
+
+    <!-- Distance Input -->
+    <div class="form-group">
+      <label for="distance">
+        <span class="label-icon">📏</span> Distância (km)
+      </label>
+      <input
+        type="number"
+        id="distance"
+        [(ngModel)]="distance"
+        name="distance"
+        step="0.1"
+        min="0.1"
+        max="200"
+        placeholder="Ex: 5.0"
+        required
+      />
+      <span class="input-hint">Distância em quilômetros</span>
+    </div>
+
+    <!-- Time Input -->
+    <div class="form-group">
+      <label>
+        <span class="label-icon">⏱️</span> Tempo
+      </label>
+      <div class="time-inputs">
+        <div class="time-field">
+          <input
+            type="number"
+            [(ngModel)]="hours"
+            name="hours"
+            min="0"
+            max="23"
+            placeholder="0"
+          />
+          <span class="time-label">horas</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-field">
+          <input
+            type="number"
+            [(ngModel)]="minutes"
+            name="minutes"
+            min="0"
+            max="59"
+            placeholder="30"
+          />
+          <span class="time-label">min</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-field">
+          <input
+            type="number"
+            [(ngModel)]="seconds"
+            name="seconds"
+            min="0"
+            max="59"
+            placeholder="0"
+          />
+          <span class="time-label">seg</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Input -->
+    <div class="form-group">
+      <label for="notes">
+        <span class="label-icon">📝</span> Notas (opcional)
+      </label>
+      <textarea
+        id="notes"
+        [(ngModel)]="notes"
+        name="notes"
+        rows="3"
+        placeholder="Como te sentiste? Condições meteorológicas?"
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="btn-submit"
+      [disabled]="isSubmitting"
+    >
+      @if (isSubmitting) {
+        <span class="loading">A guardar...</span>
+      } @else {
+        <span>✓ Registar Corrida</span>
+      }
+    </button>
+
+  </form>
+</div>

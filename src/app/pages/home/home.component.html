@@ -1,0 +1,78 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <h1>🏃 SM Health</h1>
+    <p class="subtitle">Regista o teu progresso de corridas</p>
+  </header>
+
+  <!-- Stats Cards -->
+  <section class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">🗓️</div>
+      <div class="stat-value">{{ totalRuns() }}</div>
+      <div class="stat-label">Corridas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📏</div>
+      <div class="stat-value">{{ totalDistance() | number:'1.1-1' }}</div>
+      <div class="stat-label">Km Totais</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">⏱️</div>
+      <div class="stat-value">{{ formatTime(totalTime()) }}</div>
+      <div class="stat-label">Tempo Total</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">⚡</div>
+      <div class="stat-value">{{ averagePace() }}</div>
+      <div class="stat-label">Min/Km</div>
+    </div>
+  </section>
+
+  <!-- Add Run Button -->
+  <div class="action-bar">
+    <a routerLink="/add" class="btn-add">
+      <span>+</span> Nova Corrida
+    </a>
+  </div>
+
+  <!-- Runs List -->
+  <section class="runs-section">
+    <h2>Histórico de Corridas</h2>
+
+    @if (runs().length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">🏃‍♂️</div>
+        <p>Ainda não registaste nenhuma corrida.</p>
+        <a routerLink="/add" class="btn-add-small">Registar primeira corrida</a>
+      </div>
+    } @else {
+      <div class="runs-list">
+        @for (run of runs(); track run.id) {
+          <div class="run-card">
+            <div class="run-date">
+              <span class="date-day">{{ formatDate(run.date) }}</span>
+            </div>
+            <div class="run-details">
+              <div class="run-stat">
+                <span class="run-label">Distância</span>
+                <span class="run-value">{{ run.distance }} km</span>
+              </div>
+              <div class="run-stat">
+                <span class="run-label">Tempo</span>
+                <span class="run-value">{{ formatTime(run.time) }}</span>
+              </div>
+              <div class="run-stat">
+                <span class="run-label">Ritmo</span>
+                <span class="run-value">{{ getRunPace(run) }} min/km</span>
+              </div>
+            </div>
+            <button class="btn-delete" (click)="deleteRun(run.id)" title="Eliminar">
+              ✕
+            </button>
+          </div>
+        }
+      </div>
+    }
+  </section>
+</div>
