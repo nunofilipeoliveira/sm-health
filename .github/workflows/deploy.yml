@@ -1,0 +1,47 @@
+name: Build & Deploy Angular 
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: PROD
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular
+        run: npm run build:prod
+
+      - name: Check FTP secrets
+        run: |
+          echo "Checking FTP secrets presence (via environment PROD)..."
+          if [ -z "${{ secrets.FTP_HOST }}" ] || [ -z "${{ secrets.FTP_USER }}" ] || [ -z "${{ secrets.FTP_PASS }}" ]; then
+            echo "ERROR: Required FTP secrets are not set."
+            echo "Please add secrets FTP_HOST, FTP_USER, FTP_PASS to the PROD environment."
+            exit 1
+          fi
+
+      - name: Deploy via FTP
+        uses: samkirkland/ftp-deploy-action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: dist/sm-health/browser/
+          server-dir: //httpdocs/health/
+          exclude: |
+            **/assets/**
+            **/.git*
